@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Awareness Training</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      background: linear-gradient(90deg, #006400, #00ff88);
+      padding: 4em 1em;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+    h1.breaking-title {
+      font-size: 3em;
+      color: #00ff88;
+      text-shadow: 0 0 10px #00ff88, 0 0 30px #006400;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from {text-shadow: 0 0 10px #00ff88;}
+      to {text-shadow: 0 0 25px #00ff88, 0 0 50px #006400;}
+    }
+    h2 {
+      color: #00ff88;
+    }
+    section {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 2em auto;
+      padding: 2em;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+      animation: slideUp 1s ease-in-out;
+    }
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1em;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    button {
+      background-color: #00ff88;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #006400;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #006400;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="breaking-title">Ph!sh!ng Awareness</h1>
+    <p style="font-size: 1.2em;">Cybersecurity Experience</p>
+    <p>Created by <b>Nakka Satwick</b></p>
+  </header>
+
+  <section id="intro">
+    <h2>1. What is Phishing?</h2>
+    <p>Phishing is a cyberattack that uses fake emails, messages, or websites to trick people into revealing sensitive information like passwords or credit card details.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048948.png" alt="Phishing Hook Illustration">
+    <nav>
+      <button onclick="nextSection('types')">Next →</button>
+    </nav>
+  </section>
+
+  <section id="types" style="display:none;">
+    <h2>2. Types of Phishing Attacks</h2>
+    <ul>
+      <li><b>Email Phishing:</b> Fake emails prompting you to click links or share info.</li>
+      <li><b>Spear Phishing:</b> Targeted attack on a specific person or organization.</li>
+      <li><b>Smishing:</b> Phishing through SMS messages.</li>
+      <li><b>Vishing:</b> Voice calls pretending to be official support.</li>
+      <li><b>Clone Phishing:</b> Duplicating a real email with malicious edits.</li>
+    </ul>
+    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721278.png" alt="Types of Phishing Illustration">
+    <nav>
+      <button onclick="prevSection('intro')">← Back</button>
+      <button onclick="nextSection('recognize')">Next →</button>
+    </nav>
+  </section>
+
+  <section id="recognize" style="display:none;">
+    <h2>3. How to Recognize Phishing Emails</h2>
+    <ul>
+      <li>Suspicious or mismatched sender addresses.</li>
+      <li>Spelling or grammar mistakes.</li>
+      <li>Urgent or threatening language.</li>
+      <li>Links that don’t match the sender’s domain.</li>
+      <li>Unusual attachments or requests for personal info.</li>
+    </ul>
+    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Email Alert Illustration">
+    <nav>
+      <button onclick="prevSection('types')">← Back</button>
+      <button onclick="nextSection('fake')">Next →</button>
+    </nav>
+  </section>
+
+  <section id="fake" style="display:none;">
+    <h2>4. Fake Websites</h2>
+    <p>Attackers create websites that look like trusted ones to steal your credentials. Always check for <b>https://</b>, the padlock icon, and correct domain spelling before entering details.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046895.png" alt="Fake Website Illustration">
+    <nav>
+      <button onclick="prevSection('recognize')">← Back</button>
+      <button onclick="nextSection('social')">Next →</button>
+    </nav>
+  </section>
+
+  <section id="social" style="display:none;">
+    <h2>5. Social Engineering Tactics</h2>
+    <ul>
+      <li><b>Urgency:</b> “Your account will be deactivated soon!”</li>
+      <li><b>Fear:</b> “Your account has been compromised.”</li>
+      <li><b>Curiosity:</b> “You’ve won a prize!”</li>
+      <li><b>Authority:</b> “This is from IT support.”</li>
+    </ul>
+    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933188.png" alt="Social Engineering Illustration">
+    <nav>
+      <button onclick="prevSection('fake')">← Back</button>
+      <button onclick="nextSection('quiz')">Next →</button>
+    </nav>
+  </section>
+
+  <section id="quiz" style="display:none;">
+    <h2>6. Quick Quiz</h2>
+    <p><b>Question:</b> Which of these is a sign of a phishing email?</p>
+    <form id="quizForm">
+      <input type="radio" name="q1" value="A"> A) Professional layout and correct spelling<br>
+      <input type="radio" name="q1" value="B"> B) Urgent request for personal information<br>
+      <input type="radio" name="q1" value="C"> C) Message from a known contact<br><br>
+      <button type="button" onclick="checkAnswer()">Submit Answer</button>
+    </form>
+    <p id="result"></p>
+    <nav>
+      <button onclick="prevSection('social')">← Back</button>
+      <button onclick="nextSection('summary')">Next →</button>
+    </nav>
+  </section>
+
+  <section id="summary" style="display:none;">
+    <h2>7. Summary</h2>
+    <ul>
+      <li>Always think before you click.</li>
+      <li>Verify sender details and URLs.</li>
+      <li>Never share sensitive information via email.</li>
+      <li>Report phishing attempts immediately.</li>
+    </ul>
+    <p><b>Stay Alert. Stay Secure.</b></p>
+    <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Cyber Security Lock Illustration">
+    <nav>
+      <button onclick="prevSection('quiz')">← Back</button>
+    </nav>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Phishing Awareness Training | Created by Nakka Satwick</p>
+  </footer>
+
+  <script>
+    function nextSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function prevSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function checkAnswer() {
+      const answer = document.querySelector('input[name="q1"]:checked');
+      const result = document.getElementById('result');
+      if (!answer) {
+        result.textContent = 'Please select an answer!';
+        result.style.color = 'orange';
+        return;
+      }
+      if (answer.value === 'B') {
+        result.textContent = '✅ Correct! Phishing emails often use urgency to trick you.';
+        result.style.color = '#00ff88';
+      } else {
+        result.textContent = '❌ Incorrect. Watch out for urgent or threatening messages.';
+        result.style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>
